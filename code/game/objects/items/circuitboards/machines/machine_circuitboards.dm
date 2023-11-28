@@ -437,6 +437,14 @@
 		/obj/item/stack/sheet/glass = 10,
 		/obj/item/stack/sheet/plasteel = 5)
 
+/obj/item/circuitboard/machine/rad_collector
+	name = "Radiation collector"
+	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
+	build_path = /obj/machinery/atmospherics/components/unary/rad_collector
+	req_components = list(
+		/datum/stock_part/matter_bin = 1,
+	)
+
 //Generic
 /obj/item/circuitboard/machine/component_printer
 	name = "\improper Component Printer (Machine Board)"
