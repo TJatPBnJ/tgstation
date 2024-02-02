@@ -286,7 +286,7 @@
 	if(!items_remaining)
 		finalize_build()
 		return
-	addtimer(CALLBACK(src, PROC_REF(do_make_item), design, material_cost_coefficient, time_per_item, items_remaining), time_per_item)
+	addtimer(CALLBACK(src, PROC_REF(do_make_item), design, material_cost_coefficient, time_per_item, charge_per_item, items_remaining), time_per_item)
 
 /// Resets the icon state and busy flag
 /// Called at the end of do_make_item's timer loop
