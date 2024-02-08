@@ -1,4 +1,4 @@
-/obj/machinery/rnd/production/techfab
+/obj/machinery/production/rnd/techfab
 	name = "technology fabricator"
 	desc = "Produces researched prototypes with raw materials and energy."
 	icon_state = "protolathe"

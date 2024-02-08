@@ -5118,7 +5118,7 @@
 /turf/open/floor/iron,
 /area/station/science/lab)
 "aKA" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/production/rnd/protolathe/department/science,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 5
 	},
@@ -12351,7 +12351,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "dfP" = (
-/obj/machinery/rnd/production/techfab/department/service,
+/obj/machinery/production/rnd/techfab/department/service,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
@@ -22656,7 +22656,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "gYd" = (
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/production/rnd/techfab/department/security,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
 	},
@@ -28065,7 +28065,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
 "jaQ" = (
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/production/rnd/techfab/department/medical,
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
@@ -38303,7 +38303,7 @@
 /turf/open/floor/iron/dark,
 /area/station/commons/lounge)
 "mvy" = (
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/production/rnd/circuit_imprinter,
 /obj/effect/turf_decal/trimline/yellow/filled/end{
 	dir = 4
 	},
@@ -44287,7 +44287,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/tram/left)
 "oGF" = (
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/production/rnd/techfab/department/cargo,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
 	},
@@ -51116,7 +51116,7 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit)
 "rbA" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/firealarm/directional/south{
 	pixel_x = 4
@@ -55247,7 +55247,7 @@
 /turf/closed/wall/r_wall,
 /area/station/security/checkpoint/science)
 "syE" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -68234,7 +68234,7 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "wYO" = (
-/obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/machinery/production/rnd/protolathe/department/engineering,
 /obj/effect/turf_decal/trimline/yellow/filled/end{
 	dir = 8
 	},

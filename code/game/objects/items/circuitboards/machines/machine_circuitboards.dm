@@ -307,7 +307,7 @@
 /obj/item/circuitboard/machine/protolathe/department/engineering
 	name = "Departmental Protolathe - Engineering"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/rnd/production/protolathe/department/engineering
+	build_path = /obj/machinery/production/rnd/protolathe/department/engineering
 
 /obj/item/circuitboard/machine/rtg
 	name = "RTG"
@@ -348,7 +348,7 @@
 /obj/item/circuitboard/machine/techfab/department/engineering
 	name = "\improper Departmental Techfab - Engineering"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/rnd/production/techfab/department/engineering
+	build_path = /obj/machinery/production/rnd/techfab/department/engineering
 
 /obj/item/circuitboard/machine/thermomachine
 	name = "Thermomachine"
@@ -456,7 +456,7 @@
 /obj/item/circuitboard/machine/circuit_imprinter
 	name = "Circuit Imprinter"
 	greyscale_colors = CIRCUIT_COLOR_GENERIC
-	build_path = /obj/machinery/rnd/production/circuit_imprinter
+	build_path = /obj/machinery/production/rnd/circuit_imprinter
 	req_components = list(
 		/datum/stock_part/matter_bin = 1,
 		/datum/stock_part/servo = 1,
@@ -464,12 +464,12 @@
 
 /obj/item/circuitboard/machine/circuit_imprinter/offstation
 	name = "Ancient Circuit Imprinter"
-	build_path = /obj/machinery/rnd/production/circuit_imprinter/offstation
+	build_path = /obj/machinery/production/rnd/circuit_imprinter/offstation
 
 /obj/item/circuitboard/machine/circuit_imprinter/department
 	name = "Departmental Circuit Imprinter"
 	greyscale_colors = CIRCUIT_COLOR_GENERIC
-	build_path = /obj/machinery/rnd/production/circuit_imprinter/department
+	build_path = /obj/machinery/production/rnd/circuit_imprinter/department
 
 /obj/item/circuitboard/machine/holopad
 	name = "AI Holopad"
@@ -507,7 +507,7 @@
 /obj/item/circuitboard/machine/protolathe
 	name = "Protolathe"
 	greyscale_colors = CIRCUIT_COLOR_GENERIC
-	build_path = /obj/machinery/rnd/production/protolathe
+	build_path = /obj/machinery/production/rnd/protolathe
 	req_components = list(
 		/datum/stock_part/matter_bin = 2,
 		/datum/stock_part/servo = 2,
@@ -515,12 +515,12 @@
 
 /obj/item/circuitboard/machine/protolathe/offstation
 	name = "Ancient Protolathe"
-	build_path = /obj/machinery/rnd/production/protolathe/offstation
+	build_path = /obj/machinery/production/rnd/protolathe/offstation
 
 /obj/item/circuitboard/machine/protolathe/department
 	name = "Departmental Protolathe"
 	greyscale_colors = CIRCUIT_COLOR_GENERIC
-	build_path = /obj/machinery/rnd/production/protolathe/department
+	build_path = /obj/machinery/production/rnd/protolathe/department
 
 /obj/item/circuitboard/machine/reagentgrinder
 	name = "All-In-One Grinder"
@@ -595,7 +595,7 @@
 /obj/item/circuitboard/machine/techfab
 	name = "\improper Techfab"
 	greyscale_colors = CIRCUIT_COLOR_GENERIC
-	build_path = /obj/machinery/rnd/production/techfab
+	build_path = /obj/machinery/production/rnd/techfab
 	req_components = list(
 		/datum/stock_part/matter_bin = 2,
 		/datum/stock_part/servo = 2,
@@ -603,7 +603,7 @@
 
 /obj/item/circuitboard/machine/techfab/department
 	name = "\improper Departmental Techfab"
-	build_path = /obj/machinery/rnd/production/techfab/department
+	build_path = /obj/machinery/production/rnd/techfab/department
 
 /obj/item/circuitboard/machine/vendor
 	name = "Custom Vendor"
@@ -878,7 +878,7 @@
 /obj/item/circuitboard/machine/protolathe/department/medical
 	name = "Departmental Protolathe - Medical"
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
-	build_path = /obj/machinery/rnd/production/protolathe/department/medical
+	build_path = /obj/machinery/production/rnd/protolathe/department/medical
 
 /obj/item/circuitboard/machine/sleeper
 	name = "Sleeper"
@@ -933,14 +933,14 @@
 /obj/item/circuitboard/machine/techfab/department/medical
 	name = "\improper Departmental Techfab - Medical"
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
-	build_path = /obj/machinery/rnd/production/techfab/department/medical
+	build_path = /obj/machinery/production/rnd/techfab/department/medical
 
 //Science
 
 /obj/item/circuitboard/machine/circuit_imprinter/department/science
 	name = "Departmental Circuit Imprinter - Science"
 	greyscale_colors = CIRCUIT_COLOR_SCIENCE
-	build_path = /obj/machinery/rnd/production/circuit_imprinter/department/science
+	build_path = /obj/machinery/production/rnd/circuit_imprinter/department/science
 
 /obj/item/circuitboard/machine/cyborgrecharger
 	name = "Cyborg Recharger"
@@ -1006,7 +1006,7 @@
 /obj/item/circuitboard/machine/protolathe/department/science
 	name = "Departmental Protolathe - Science"
 	greyscale_colors = CIRCUIT_COLOR_SCIENCE
-	build_path = /obj/machinery/rnd/production/protolathe/department/science
+	build_path = /obj/machinery/production/rnd/protolathe/department/science
 
 /obj/item/circuitboard/machine/quantumpad
 	name = "Quantum Pad"
@@ -1035,7 +1035,7 @@
 /obj/item/circuitboard/machine/techfab/department/science
 	name = "\improper Departmental Techfab - Science"
 	greyscale_colors = CIRCUIT_COLOR_SCIENCE
-	build_path = /obj/machinery/rnd/production/techfab/department/science
+	build_path = /obj/machinery/production/rnd/techfab/department/science
 
 /obj/item/circuitboard/machine/teleporter_hub
 	name = "Teleporter Hub"
@@ -1096,7 +1096,7 @@
 /obj/item/circuitboard/machine/protolathe/department/security
 	name = "Departmental Protolathe - Security"
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
-	build_path = /obj/machinery/rnd/production/protolathe/department/security
+	build_path = /obj/machinery/production/rnd/protolathe/department/security
 
 /obj/item/circuitboard/machine/recharger
 	name = "Weapon Recharger"
@@ -1108,7 +1108,7 @@
 /obj/item/circuitboard/machine/techfab/department/security
 	name = "\improper Departmental Techfab - Security"
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
-	build_path = /obj/machinery/rnd/production/techfab/department/security
+	build_path = /obj/machinery/production/rnd/techfab/department/security
 
 //Service
 
@@ -1284,7 +1284,7 @@
 /obj/item/circuitboard/machine/protolathe/department/service
 	name = "Departmental Protolathe - Service"
 	greyscale_colors = CIRCUIT_COLOR_SERVICE
-	build_path = /obj/machinery/rnd/production/protolathe/department/service
+	build_path = /obj/machinery/production/rnd/protolathe/department/service
 
 /obj/item/circuitboard/machine/recycler
 	name = "Recycler"
@@ -1306,7 +1306,7 @@
 /obj/item/circuitboard/machine/techfab/department/service
 	name = "\improper Departmental Techfab - Service"
 	greyscale_colors = CIRCUIT_COLOR_SERVICE
-	build_path = /obj/machinery/rnd/production/techfab/department/service
+	build_path = /obj/machinery/production/rnd/techfab/department/service
 
 /obj/item/circuitboard/machine/vendatray
 	name = "Vend-A-Tray"
@@ -1349,7 +1349,7 @@
 /obj/item/circuitboard/machine/protolathe/department/cargo
 	name = "Departmental Protolathe - Cargo"
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
-	build_path = /obj/machinery/rnd/production/protolathe/department/cargo
+	build_path = /obj/machinery/production/rnd/protolathe/department/cargo
 
 /obj/item/circuitboard/machine/stacking_machine
 	name = "Stacking Machine"
@@ -1370,7 +1370,7 @@
 /obj/item/circuitboard/machine/techfab/department/cargo
 	name = "\improper Departmental Techfab - Cargo"
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
-	build_path = /obj/machinery/rnd/production/techfab/department/cargo
+	build_path = /obj/machinery/production/rnd/techfab/department/cargo
 
 /obj/item/circuitboard/machine/materials_market
 	name = "Galactic Materials Market"

@@ -86,11 +86,11 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 
 	maximum_allowed = 2
 	applicable_jobs = list(
-		JOB_CHIEF_ENGINEER = /obj/machinery/rnd/production/protolathe/department/engineering,
-		JOB_CHIEF_MEDICAL_OFFICER = /obj/machinery/rnd/production/techfab/department/medical,
-		JOB_HEAD_OF_PERSONNEL = /obj/machinery/rnd/production/techfab/department/service,
-		JOB_QUARTERMASTER = /obj/machinery/rnd/production/techfab/department/cargo,
-		JOB_RESEARCH_DIRECTOR = /obj/machinery/rnd/production/protolathe/department/science,
+		JOB_CHIEF_ENGINEER = /obj/machinery/production/rnd/protolathe/department/engineering,
+		JOB_CHIEF_MEDICAL_OFFICER = /obj/machinery/production/rnd/techfab/department/medical,
+		JOB_HEAD_OF_PERSONNEL = /obj/machinery/production/rnd/techfab/department/service,
+		JOB_QUARTERMASTER = /obj/machinery/production/rnd/techfab/department/cargo,
+		JOB_RESEARCH_DIRECTOR = /obj/machinery/production/rnd/protolathe/department/science,
 		JOB_SHAFT_MINER = /obj/machinery/mineral/ore_redemption,
 	)
 
@@ -230,10 +230,10 @@ GLOBAL_DATUM_INIT(objective_machine_handler, /datum/objective_target_machine_han
 /obj/machinery/rnd/server/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
 
-/obj/machinery/rnd/production/protolathe/department/add_as_sabotage_target()
+/obj/machinery/production/rnd/protolathe/department/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
 
-/obj/machinery/rnd/production/techfab/department/add_as_sabotage_target()
+/obj/machinery/production/rnd/techfab/department/add_as_sabotage_target()
 	return add_sabotage_machine(src, type)
 
 /obj/machinery/mineral/ore_redemption/add_as_sabotage_target()

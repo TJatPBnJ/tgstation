@@ -38,7 +38,7 @@
 	)
 	. = ..()
 
-	set_wires(new /datum/wires/autolathe(src))
+	set_wires(new /datum/wires/production(src))
 	if(!GLOB.autounlock_techwebs[/datum/techweb/autounlocking/autolathe])
 		GLOB.autounlock_techwebs[/datum/techweb/autounlocking/autolathe] = new /datum/techweb/autounlocking/autolathe
 	stored_research = GLOB.autounlock_techwebs[/datum/techweb/autounlocking/autolathe]

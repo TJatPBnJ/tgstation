@@ -2197,7 +2197,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "If" = (
-/obj/machinery/rnd/production/techfab/department,
+/obj/machinery/production/rnd/techfab/department,
 /turf/open/floor/iron,
 /area/station/science)
 "Ih" = (
@@ -2315,7 +2315,7 @@
 /turf/open/floor/iron,
 /area/station/medical/medbay)
 "NZ" = (
-/obj/machinery/rnd/production/protolathe/department,
+/obj/machinery/production/rnd/protolathe/department,
 /turf/open/floor/iron,
 /area/station/science)
 "Ot" = (
@@ -2590,7 +2590,7 @@
 /area/station/science/explab)
 "Yy" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/rnd/production/circuit_imprinter/department,
+/obj/machinery/production/rnd/circuit_imprinter/department,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron,

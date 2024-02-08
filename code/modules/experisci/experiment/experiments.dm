@@ -192,12 +192,12 @@
 	description = "Our newly-designed advanced machinery components require practical application tests for hints at possible further advancements, as well as a general confirmation that we didn't actually design worse parts somehow."
 	required_points = 6
 	required_atoms = list(
-		/obj/machinery/rnd/production/protolathe/department/science = 1,
-		/obj/machinery/rnd/production/protolathe/department/engineering = 1,
-		/obj/machinery/rnd/production/techfab/department/cargo = 1,
-		/obj/machinery/rnd/production/techfab/department/medical = 1,
-		/obj/machinery/rnd/production/techfab/department/security = 1,
-		/obj/machinery/rnd/production/techfab/department/service = 1
+		/obj/machinery/production/rnd/protolathe/department/science = 1,
+		/obj/machinery/production/rnd/protolathe/department/engineering = 1,
+		/obj/machinery/production/rnd/techfab/department/cargo = 1,
+		/obj/machinery/production/rnd/techfab/department/medical = 1,
+		/obj/machinery/production/rnd/techfab/department/security = 1,
+		/obj/machinery/production/rnd/techfab/department/service = 1
 	)
 	required_tier = 2
 
@@ -217,7 +217,7 @@
 	required_points = 15
 	required_atoms = list(
 		/obj/machinery/autolathe = 1,
-		/obj/machinery/rnd/production/circuit_imprinter/department/science = 1,
+		/obj/machinery/production/rnd/circuit_imprinter/department/science = 1,
 		/obj/machinery/monkey_recycler = 1,
 		/obj/machinery/processor/slime = 1,
 		/obj/machinery/processor = 2,

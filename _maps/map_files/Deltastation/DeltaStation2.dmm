@@ -7545,7 +7545,7 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry)
 "bPj" = (
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/production/rnd/techfab/department/cargo,
 /obj/effect/turf_decal/stripes/box,
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/iron,
@@ -23469,7 +23469,7 @@
 /turf/open/floor/iron/dark/corner,
 /area/station/engineering/atmos/pumproom)
 "fNW" = (
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/production/rnd/techfab/department/security,
 /obj/effect/turf_decal/stripes/box,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -25053,7 +25053,7 @@
 "gho" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/production/rnd/circuit_imprinter,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
@@ -30624,7 +30624,7 @@
 /area/station/security/courtroom)
 "hCs" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/rnd/production/techfab/department/service,
+/obj/machinery/production/rnd/techfab/department/service,
 /turf/open/floor/iron/checker,
 /area/station/hallway/secondary/service)
 "hCt" = (
@@ -43319,7 +43319,7 @@
 /area/station/hallway/secondary/entry)
 "kKy" = (
 /obj/machinery/airalarm/directional/east,
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/production/rnd/techfab/department/medical,
 /obj/effect/turf_decal/stripes/box,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
@@ -53184,7 +53184,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/lobby)
 "nlK" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/production/rnd/protolathe/department/science,
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
@@ -65811,7 +65811,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/service/lawoffice)
 "qvK" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
@@ -77271,7 +77271,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "tpd" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
@@ -93858,7 +93858,7 @@
 "xvf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/machinery/production/rnd/protolathe/department/engineering,
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera/directional/north{
 	c_tag = "Engineering - Shared Storage";

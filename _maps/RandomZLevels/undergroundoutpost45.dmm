@@ -1774,7 +1774,7 @@
 /turf/open/floor/iron,
 /area/awaymission/undergroundoutpost45/research)
 "hD" = (
-/obj/machinery/rnd/production/protolathe/offstation,
+/obj/machinery/production/rnd/protolathe/offstation,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -1931,7 +1931,7 @@
 /turf/open/floor/iron,
 /area/awaymission/undergroundoutpost45/research)
 "ii" = (
-/obj/machinery/rnd/production/circuit_imprinter/offstation,
+/obj/machinery/production/rnd/circuit_imprinter/offstation,
 /turf/open/floor/iron,
 /area/awaymission/undergroundoutpost45/research)
 "ik" = (

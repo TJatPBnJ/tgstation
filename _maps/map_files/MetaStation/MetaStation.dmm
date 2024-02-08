@@ -3383,7 +3383,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "bjl" = (
-/obj/machinery/rnd/production/techfab/department/service,
+/obj/machinery/production/rnd/techfab/department/service,
 /obj/effect/turf_decal/trimline/brown/warning{
 	dir = 6
 	},
@@ -3796,7 +3796,7 @@
 /turf/open/floor/circuit/green,
 /area/station/ai_monitored/turret_protected/ai_upload)
 "bpA" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "bpB" = (
@@ -8692,7 +8692,7 @@
 /turf/closed/wall,
 /area/station/security/range)
 "dgS" = (
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/production/rnd/techfab/department/security,
 /turf/open/floor/iron/dark,
 /area/station/security/office)
 "dhi" = (
@@ -18023,7 +18023,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "gFy" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/production/rnd/protolathe/department/science,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "gFL" = (
@@ -23813,7 +23813,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "iHy" = (
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/production/rnd/circuit_imprinter,
 /obj/effect/turf_decal/bot,
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/tile/yellow{
@@ -58317,7 +58317,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "uLs" = (
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/production/rnd/techfab/department/medical,
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
@@ -60665,7 +60665,7 @@
 /area/station/commons/dorms)
 "vzW" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -61795,7 +61795,7 @@
 	},
 /area/station/medical/treatment_center)
 "vSC" = (
-/obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/machinery/production/rnd/protolathe/department/engineering,
 /obj/effect/turf_decal/bot,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/yellow{
@@ -64676,7 +64676,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/production/rnd/techfab/department/cargo,
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted{
 	dir = 8
 	},

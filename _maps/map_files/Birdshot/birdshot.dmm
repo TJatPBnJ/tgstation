@@ -9932,7 +9932,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/greater)
 "dOd" = (
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/production/rnd/techfab/department/security,
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/office)
@@ -25229,7 +25229,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/production/rnd/circuit_imprinter,
 /obj/machinery/camera{
 	c_tag = "Engineering - Foyer - Starboard";
 	dir = 9
@@ -26357,7 +26357,7 @@
 /turf/open/floor/wood,
 /area/station/maintenance/starboard/greater)
 "jza" = (
-/obj/machinery/rnd/production/techfab/department/service,
+/obj/machinery/production/rnd/techfab/department/service,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
@@ -28829,7 +28829,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/port/fore)
 "krd" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark/side{
 	dir = 4
@@ -36466,7 +36466,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "mXt" = (
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/production/rnd/techfab/department/medical,
 /obj/effect/turf_decal/stripes/box,
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/dark/small,
@@ -55450,7 +55450,7 @@
 /turf/open/misc/asteroid,
 /area/station/maintenance/starboard/greater)
 "tiQ" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/production/rnd/protolathe/department/science,
 /obj/machinery/camera/autoname/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
@@ -66493,7 +66493,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/machinery/production/rnd/protolathe/department/engineering,
 /turf/open/floor/plating,
 /area/station/engineering/break_room)
 "wJV" = (
@@ -70391,7 +70391,7 @@
 /turf/open/floor/iron/cafeteria,
 /area/station/science/circuits)
 "xKq" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/bot,
 /obj/structure/fireaxecabinet/mechremoval/directional/west,
 /turf/open/floor/iron,
@@ -72295,7 +72295,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/xenobiology)
 "yjc" = (
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/production/rnd/techfab/department/cargo,
 /obj/effect/turf_decal/delivery/white,
 /obj/machinery/light_switch/directional/south,
 /turf/open/floor/iron/smooth,

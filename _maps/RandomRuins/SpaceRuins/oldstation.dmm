@@ -1505,7 +1505,7 @@
 /turf/open/floor/iron,
 /area/ruin/space/ancientstation/charlie/hydro)
 "gG" = (
-/obj/machinery/rnd/production/protolathe/offstation,
+/obj/machinery/production/rnd/protolathe/offstation,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/white,
 /area/ruin/space/ancientstation/delta/rnd)
@@ -1525,7 +1525,7 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "gM" = (
-/obj/machinery/rnd/production/circuit_imprinter/offstation,
+/obj/machinery/production/rnd/circuit_imprinter/offstation,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/dropper,
 /turf/open/floor/iron/white,

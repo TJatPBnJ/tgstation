@@ -14202,7 +14202,7 @@
 /turf/open/floor/iron,
 /area/station/security/processing)
 "elf" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/machinery/button/door/directional/north{
 	id = "rnd";
 	name = "Shutters Control Button";
@@ -17447,7 +17447,7 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/security/range)
 "fog" = (
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/production/rnd/techfab/department/medical,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
 	},
@@ -23807,7 +23807,7 @@
 /obj/effect/mapping_helpers/requests_console/ore_update,
 /obj/effect/mapping_helpers/requests_console/information,
 /obj/effect/mapping_helpers/requests_console/assistance,
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
@@ -31238,7 +31238,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "jIm" = (
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/production/rnd/techfab/department/security,
 /obj/structure/cable,
 /obj/structure/noticeboard/directional/east,
 /obj/machinery/light/directional/east,
@@ -40870,7 +40870,7 @@
 /obj/machinery/camera/directional/west{
 	c_tag = "Cargo Bay Office"
 	},
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/production/rnd/techfab/department/cargo,
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "mAO" = (
@@ -44935,7 +44935,7 @@
 /area/station/security/checkpoint/medical)
 "nKj" = (
 /obj/structure/window/reinforced/spawner/directional/south,
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/production/rnd/circuit_imprinter,
 /obj/machinery/requests_console/directional/east{
 	department = "Engineering";
 	name = "Engineering Requests Console"
@@ -45795,7 +45795,7 @@
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "nYQ" = (
-/obj/machinery/rnd/production/techfab/department/service,
+/obj/machinery/production/rnd/techfab/department/service,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -46449,7 +46449,7 @@
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "ojF" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/production/rnd/protolathe/department/science,
 /turf/open/floor/iron/checker,
 /area/station/science/lab)
 "ojP" = (
@@ -67158,7 +67158,7 @@
 /turf/open/floor/engine,
 /area/station/science/explab)
 "uCK" = (
-/obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/machinery/production/rnd/protolathe/department/engineering,
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/lobby)

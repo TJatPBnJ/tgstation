@@ -83,7 +83,7 @@
 			/obj/machinery/portable_atmospherics = "PORT_ATMOS",
 			/obj/machinery/door = "DOOR",
 			/obj/machinery/door/airlock = "AIRLOCK",
-			/obj/machinery/rnd/production = "RND_FABRICATOR",
+			/obj/machinery/production/rnd = "RND_FABRICATOR",
 			/obj/machinery/computer = "COMPUTER",
 			/obj/machinery/computer/camera_advanced/shuttle_docker = "DOCKING_COMPUTER",
 			/obj/machinery/vending = "VENDING",

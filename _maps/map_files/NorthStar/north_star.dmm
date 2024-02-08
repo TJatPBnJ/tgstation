@@ -3293,7 +3293,7 @@
 	},
 /area/station/maintenance/floor1/port/aft)
 "aSq" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/production/rnd/protolathe/department/science,
 /obj/effect/turf_decal/bot,
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron/dark,
@@ -5108,7 +5108,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
-/obj/machinery/rnd/production/techfab/department/cargo,
+/obj/machinery/production/rnd/techfab/department/cargo,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/smooth,
 /area/station/cargo/office)
@@ -15528,7 +15528,7 @@
 /area/station/hallway/floor2/fore)
 "dXX" = (
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/machinery/rnd/production/techfab/department/security,
+/obj/machinery/production/rnd/techfab/department/security,
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/security/office)
@@ -18365,7 +18365,7 @@
 /obj/effect/turf_decal/siding/thinplating_new{
 	dir = 8
 	},
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/production/rnd/circuit_imprinter,
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -41268,7 +41268,7 @@
 /turf/open/floor/iron/textured_large,
 /area/station/cargo/storage)
 "kOU" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/science/robotics/lab)
@@ -42897,7 +42897,7 @@
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "ljf" = (
-/obj/machinery/rnd/production/techfab/department/service,
+/obj/machinery/production/rnd/techfab/department/service,
 /obj/effect/turf_decal/bot,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
@@ -60396,7 +60396,7 @@
 /obj/effect/turf_decal/siding/thinplating_new{
 	dir = 8
 	},
-/obj/machinery/rnd/production/protolathe/department/engineering,
+/obj/machinery/production/rnd/protolathe/department/engineering,
 /obj/structure/cable,
 /obj/machinery/newscaster/directional/east,
 /obj/machinery/light/small/directional/east,
@@ -71029,7 +71029,7 @@
 /turf/open/floor/iron/kitchen,
 /area/station/service/kitchen/abandoned)
 "sEL" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
@@ -74955,7 +74955,7 @@
 	},
 /area/station/engineering/atmos/office)
 "tDV" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/production/rnd/circuit_imprinter/department/science,
 /obj/effect/turf_decal/bot,
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron/dark,
@@ -87560,7 +87560,7 @@
 /area/station/service/hydroponics/garden/abandoned)
 "wNu" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/machinery/rnd/production/techfab/department/medical,
+/obj/machinery/production/rnd/techfab/department/medical,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/storage)
 "wNx" = (

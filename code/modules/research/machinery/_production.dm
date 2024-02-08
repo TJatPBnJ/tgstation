@@ -37,11 +37,11 @@
 		/datum/component/remote_materials, \
 		mapload, \
 		mat_container_signals = list( \
-			COMSIG_MATCONTAINER_ITEM_CONSUMED = TYPE_PROC_REF(/obj/machinery/rnd, local_material_insert)
+			COMSIG_MATCONTAINER_ITEM_CONSUMED = TYPE_PROC_REF(/obj/machinery/production, local_material_insert)
 		) \
 	)
 
-	RegisterSignal(src, COMSIG_SILO_ITEM_CONSUMED, TYPE_PROC_REF(/obj/machinery/rnd/production, silo_material_insert))
+	RegisterSignal(src, COMSIG_SILO_ITEM_CONSUMED, TYPE_PROC_REF(/obj/machinery/production, silo_material_insert))
 
 	AddComponent(
 		/datum/component/payment, \
@@ -51,6 +51,7 @@
 		TRUE, \
 	)
 	set_wires(new /datum/wires/production(src))
+	register_context()
 	update_icon(UPDATE_OVERLAYS)
 
 /obj/machinery/production/Destroy()
@@ -80,7 +81,7 @@
 	. += stripe
 
 
-/obj/machinery/rnd/production/examine(mob/user)
+/obj/machinery/production/examine(mob/user)
 	. = ..()
 	if(!in_range(user, src) && !isobserver(user))
 		return
@@ -92,11 +93,51 @@
 	else
 		. += span_notice("[EXAMINE_HINT("Drag")] towards a direction (while next to it) to change drop direction.")
 
-/obj/machinery/rnd/production/add_context(atom/source, list/context, obj/item/held_item, mob/user)
+/obj/machinery/production/rnd/examine(mob/user)
 	. = ..()
+	if(!in_range(user, src) && !isobserver(user))
+		return
+	. += span_notice("A [EXAMINE_HINT("multitool")] with techweb designs can be uploaded here.")
+	. += span_notice("Its maintainence panel can be [EXAMINE_HINT("screwed")] [panel_open ? "closed" : "open"].")
+	if(panel_open)
+		. += span_notice("Use a [EXAMINE_HINT("multitool")] or [EXAMINE_HINT("wirecutters")] to interact with wires.")
+		. += span_notice("The machine can be [EXAMINE_HINT("pried")] apart.")
+
+/obj/machinery/production/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	if(drop_direction)
 		context[SCREENTIP_CONTEXT_ALT_LMB] = "Reset Drop"
 		return CONTEXTUAL_SCREENTIP_SET
+
+	if(isnull(held_item))
+		return NONE
+
+	if(held_item.tool_behaviour == TOOL_SCREWDRIVER)
+		context[SCREENTIP_CONTEXT_RMB] = "[panel_open ? "Close" : "Open"] Panel"
+		return CONTEXTUAL_SCREENTIP_SET
+
+	if(panel_open)
+		if(held_item.tool_behaviour == TOOL_CROWBAR)
+			context[SCREENTIP_CONTEXT_LMB] = "Deconstruct"
+			return CONTEXTUAL_SCREENTIP_SET
+		if(is_wire_tool(held_item))
+			context[SCREENTIP_CONTEXT_LMB] = "Open Wires"
+			return CONTEXTUAL_SCREENTIP_SET
+
+
+/obj/machinery/production/rnd/add_context(atom/source, list/context, obj/item/held_item, mob/user)
+	. = ..()
+	if(held_item.tool_behaviour == TOOL_SCREWDRIVER)
+		context[SCREENTIP_CONTEXT_LMB] = "[panel_open ? "Close" : "Open"] Panel"
+		context[SCREENTIP_CONTEXT_RMB] = "[panel_open ? "Close" : "Open"] Panel"
+		return CONTEXTUAL_SCREENTIP_SET
+	if(!panel_open)
+		if(held_item.tool_behaviour == TOOL_MULTITOOL)
+			var/obj/item/multitool/tool = held_item
+			if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb))
+				context[SCREENTIP_CONTEXT_LMB] = "Upload Techweb"
+				context[SCREENTIP_CONTEXT_RMB] = "Upload Techweb"
+				return CONTEXTUAL_SCREENTIP_SET
+
 
 /obj/machinery/production/rnd/proc/connect_techweb(datum/techweb/new_techweb)
 	if(stored_research)
@@ -110,7 +151,7 @@
 	RegisterSignals(
 		stored_research,
 		list(COMSIG_TECHWEB_ADD_DESIGN, COMSIG_TECHWEB_REMOVE_DESIGN),
-		TYPE_PROC_REF(/obj/machinery/rnd/production, on_techweb_update)
+		TYPE_PROC_REF(/obj/machinery/production/rnd, on_techweb_update)
 	)
 	update_designs()
 
@@ -132,7 +173,7 @@
 	for(var/design_id in stored_research.researched_designs)
 		var/datum/design/design = SSresearch.techweb_design_by_id(design_id)
 
-		if((isnull(allowed_department_flags) || (design.departmental_flags & allowed_department_flags)) && (design.build_type & allowed_buildtypes))
+		if(can_print_design(design))
 			cached_designs |= design
 
 	var/design_delta = cached_designs.len - previous_design_count
@@ -143,15 +184,8 @@
 
 	update_static_data_for_all_viewers()
 
-/obj/machinery/rnd/production/proc/on_techweb_update()
-	SIGNAL_HANDLER
-
-	// We're probably going to get more than one update (design) at a time, so batch
-	// them together.
-	addtimer(CALLBACK(src, PROC_REF(update_designs)), 2 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
-
 ///When materials are instered via silo link
-/obj/machinery/rnd/proc/silo_material_insert(obj/machinery/rnd/machine, container, obj/item/item_inserted, last_inserted_id, list/mats_consumed, amount_inserted)
+/obj/machinery/production/proc/silo_material_insert(obj/machinery/rnd/machine, container, obj/item/item_inserted, last_inserted_id, list/mats_consumed, amount_inserted)
 	SIGNAL_HANDLER
 
 	process_item(item_inserted, mats_consumed, amount_inserted)
@@ -164,7 +198,7 @@
  * * list/mats_consumed - list of mats consumed
  * * amount_inserted - amount of material actually processed
  */
-/obj/machinery/rnd/proc/process_item(obj/item/item_inserted, list/mats_consumed, amount_inserted)
+/obj/machinery/production/proc/process_item(obj/item/item_inserted, list/mats_consumed, amount_inserted)
 	PRIVATE_PROC(TRUE)
 
 	if(directly_use_power(round((amount_inserted / SHEET_MATERIAL_AMOUNT) * active_power_usage * 0.00025)))
@@ -186,14 +220,14 @@
  *
  * * mat_name - the name of the material we are trying to animate on the machine
  */
-/obj/machinery/rnd/proc/flick_animation(mat_name)
+/obj/machinery/production/proc/flick_animation(mat_name)
 	PROTECTED_PROC(TRUE)
 	SHOULD_CALL_PARENT(FALSE)
 
 	flick_overlay_view(mutable_appearance('icons/obj/machines/research.dmi', "protolathe_[mat_name]"), 1 SECONDS)
 
 ///When materials are instered into local storage
-/obj/machinery/rnd/proc/local_material_insert(container, obj/item/item_inserted, last_inserted_id, list/mats_consumed, amount_inserted, atom/context)
+/obj/machinery/production/proc/local_material_insert(container, obj/item/item_inserted, last_inserted_id, list/mats_consumed, amount_inserted, atom/context)
 	SIGNAL_HANDLER
 
 	process_item(item_inserted, mats_consumed, amount_inserted)
@@ -229,11 +263,18 @@
  * * material_efficiency_affected - if the design cost is affected by machine efficiency
  */
 /obj/machinery/production/proc/build_efficiency(material_efficiency_affected)
-	PRIVATE_PROC(TRUE)
+	PROTECTED_PROC(TRUE)
 	return material_efficiency_affected ? efficiency_coeff : 1
 
 /obj/machinery/production/proc/is_valid_design(design_id)
-	return stored_research.researched_designs(design_id)
+	return stored_research.researched_designs[design_id]
+
+/obj/machinery/production/proc/can_print_design(var/datum/design/design)
+	if(isnull(allowed_department_flags) || design.departmental_flags & allowed_department_flags)
+		return TRUE
+	if(isnull(design.build_type) || (design.build_type & allowed_buildtypes))
+		return TRUE
+	return FALSE
 
 /obj/machinery/production/ui_assets(mob/user)
 	return list(
@@ -259,7 +300,6 @@
 	for(var/datum/design/design in cached_designs)
 		var/cost = list()
 
-		max_multiplier = INFINITY
 		coefficient = build_efficiency(design.material_efficiency_affected)
 		for(var/datum/material/mat in design.materials)
 			cost[mat.name] = OPTIMAL_COST(design.materials[mat] * coefficient)
@@ -322,11 +362,8 @@
 			if(!design_id || !is_valid_design(design_id))
 				return
 			var/datum/design/design = SSresearch.techweb_design_by_id(design_id)
-			if(!(isnull(allowed_department_flags) || (design.departmental_flags & allowed_department_flags)))
+			if(!can_print_design(design))
 				say("This fabricator does not have the necessary keys to decrypt this design.")
-				return FALSE
-			if(design.build_type && !(design.build_type & allowed_buildtypes))
-				say("This fabricator does not have the necessary manipulation systems for this design.")
 				return FALSE
 
 			//validate print quantity
@@ -433,7 +470,7 @@
 	SStgui.update_uis(src)
 	icon_state = initial(icon_state)
 
-/obj/machinery/rnd/production/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
+/obj/machinery/production/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
 	. = ..()
 	if((!issilicon(usr) && !isAdminGhostAI(usr)) && !Adjacent(usr))
 		return
@@ -446,7 +483,7 @@
 	drop_direction = direction
 	balloon_alert(usr, "dropping [dir2text(drop_direction)]")
 
-/obj/machinery/rnd/production/AltClick(mob/user)
+/obj/machinery/production/AltClick(mob/user)
 	. = ..()
 	if(!drop_direction || !can_interact(user))
 		return
