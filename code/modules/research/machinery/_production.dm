@@ -1,6 +1,8 @@
 /obj/machinery/production
 	name = "technology fabricator"
 	desc = "Makes researched and prototype items with materials and energy."
+	icon = 'icons/obj/machines/research.dmi'
+	density = TRUE
 
 	/// The efficiency coefficient. Material costs and print times are multiplied by this number;
 	var/efficiency_coeff = 1
@@ -53,6 +55,13 @@
 	set_wires(new /datum/wires/production(src))
 	register_context()
 	update_icon(UPDATE_OVERLAYS)
+
+/obj/machinery/production/rnd/LateInitialize()
+	. = ..()
+	if(!CONFIG_GET(flag/no_default_techweb_link) && !stored_research)
+		CONNECT_TO_RND_SERVER_ROUNDSTART(stored_research, src)
+	if(stored_research)
+		on_connected_techweb()
 
 /obj/machinery/production/Destroy()
 	materials = null
@@ -126,6 +135,8 @@
 
 /obj/machinery/production/rnd/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
+	if(isnull(held_item))
+		return .
 	if(held_item.tool_behaviour == TOOL_SCREWDRIVER)
 		context[SCREENTIP_CONTEXT_LMB] = "[panel_open ? "Close" : "Open"] Panel"
 		context[SCREENTIP_CONTEXT_RMB] = "[panel_open ? "Close" : "Open"] Panel"
@@ -270,11 +281,11 @@
 	return stored_research.researched_designs[design_id]
 
 /obj/machinery/production/proc/can_print_design(var/datum/design/design)
-	if(isnull(allowed_department_flags) || design.departmental_flags & allowed_department_flags)
-		return TRUE
-	if(isnull(design.build_type) || (design.build_type & allowed_buildtypes))
-		return TRUE
-	return FALSE
+	if(!(isnull(allowed_department_flags) || design.departmental_flags & allowed_department_flags))
+		return FALSE
+	if(!(isnull(design.build_type) || (design.build_type & allowed_buildtypes)))
+		return FALSE
+	return TRUE
 
 /obj/machinery/production/ui_assets(mob/user)
 	return list(
