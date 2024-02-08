@@ -1,4 +1,9 @@
-/datum/design/iron
+/datum/design/material
+	name = "Generic Material"
+	material_efficiency_affected = FALSE
+	maxstack = 50
+
+/datum/design/material/iron
 	name = "Iron"
 	id = "iron"
 	build_type = AUTOLATHE
@@ -8,9 +13,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/rods
+/datum/design/material/rods
 	name = "Iron Rod"
 	id = "rods"
 	build_type = AUTOLATHE
@@ -20,9 +24,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/glass
+/datum/design/material/glass
 	name = "Glass"
 	id = "glass"
 	build_type = AUTOLATHE
@@ -32,9 +35,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/rglass
+/datum/design/material/rglass
 	name = "Reinforced Glass"
 	id = "rglass"
 	build_type = AUTOLATHE | SMELTER | PROTOLATHE | AWAY_LATHE
@@ -44,10 +46,9 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
 
-/datum/design/silver
+/datum/design/material/silver
 	name = "Silver"
 	id = "silver"
 	build_type = AUTOLATHE
@@ -57,9 +58,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/gold
+/datum/design/material/gold
 	name = "Gold"
 	id = "gold"
 	build_type = AUTOLATHE
@@ -69,9 +69,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/diamond
+/datum/design/material/diamond
 	name = "Diamond"
 	id = "diamond"
 	build_type = AUTOLATHE
@@ -81,9 +80,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/plasma
+/datum/design/material/plasma
 	name = "Plasma"
 	id = "plasma"
 	build_type = AUTOLATHE
@@ -93,9 +91,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/uranium
+/datum/design/material/uranium
 	name = "Uranium"
 	id = "uranium"
 	build_type = AUTOLATHE
@@ -105,9 +102,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/bananium
+/datum/design/material/bananium
 	name = "Bananium"
 	id = "bananium"
 	build_type = AUTOLATHE
@@ -117,9 +113,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/titanium
+/datum/design/material/titanium
 	name = "Titanium"
 	id = "titanium"
 	build_type = AUTOLATHE
@@ -129,9 +124,8 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50
 
-/datum/design/plastic
+/datum/design/material/plastic
 	name = "Plastic"
 	id = "plastic"
 	build_type = AUTOLATHE
@@ -141,4 +135,3 @@
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
-	maxstack = 50

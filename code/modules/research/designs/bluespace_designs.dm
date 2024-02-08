@@ -33,6 +33,7 @@
 	id = "bluespace_crystal"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(/datum/material/diamond =HALF_SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/plasma =HALF_SHEET_MATERIAL_AMOUNT * 1.5)
+	material_efficiency_affected = FALSE
 	build_path = /obj/item/stack/ore/bluespace_crystal/artificial
 	category = list(
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS

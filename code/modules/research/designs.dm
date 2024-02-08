@@ -31,6 +31,8 @@ other types of metals and chemistry for reagents).
 	var/build_type = null
 	/// List of materials required to create one unit of the product. Format is (typepath or caregory) -> amount
 	var/list/materials = list()
+	///For designs which have a cost that should not change for upgraded machines
+	var/material_efficiency_affected = TRUE
 	/// The amount of time required to create one unit of the product.
 	var/construction_time = 3.2 SECONDS
 	/// The typepath of the object produced by this design
