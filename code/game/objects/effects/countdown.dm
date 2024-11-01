@@ -100,6 +100,19 @@
 	else if(N.timing)
 		return round(N.get_time_left(), 1)
 
+/obj/effect/countdown/clonepod
+	name = "cloning pod countdown"
+	color = "#18d100"
+	text_size = 1
+
+/obj/effect/countdown/clonepod/get_value()
+	var/obj/machinery/clonepod/cloner = attached_to
+	if(!istype(cloner))
+		return
+	else if(cloner.occupant)
+		var/completion = round(cloner.get_completion())
+		return completion
+
 /obj/effect/countdown/supermatter
 	name = "supermatter damage"
 	color = "#00ff80"
