@@ -163,6 +163,26 @@
 	else
 		return ..()
 
+/obj/machinery/computer/cloning/ui_interact(mob/user, datum/tgui/ui)
+	. = ..()
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "Cloning")
+		ui.open()
+
+/obj/machinery/computer/cloning/ui_data(mob/user)
+	var/list/data = list()
+	data["health"] = health
+	data["color"] = color
+
+	return data
+
+/obj/machinery/computer/cloning/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	. = ..()
+	if(.)
+		return
+
+/*
 /obj/machinery/computer/cloning/ui_interact(mob/user)
 	. = ..()
 
@@ -317,7 +337,7 @@
 	popup.set_content(dat)
 	popup.set_title_image(user.browse_rsc_icon(icon, icon_state))
 	popup.open()
-
+*/
 /obj/machinery/computer/cloning/Topic(href, href_list)
 	if(..())
 		return

@@ -14,7 +14,7 @@
 	density = TRUE
 	icon = 'icons/obj/machines/cloning.dmi'
 	icon_state = "pod_0"
-	req_access = list(ACCESS_CLONING) //FOR PREMATURE UNLOCKING.
+//	req_access = list(ACCESS_CLONING) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
 	circuit = /obj/item/circuitboard/machine/clonepod
 
@@ -63,12 +63,13 @@
 	. = ..()
 
 /obj/machinery/clonepod/RefreshParts()
+	. = ..()
 	speed_coeff = 0
 	efficiency = 0
-	for(var/obj/item/stock_parts/scanning_module/scanner in component_parts)
-		efficiency += S.rating
-	for(var/obj/item/stock_parts/servo/servo in component_parts)
-		speed_coeff += P.rating
+	for(var/obj/item/stock_parts/scanning_module/part in component_parts)
+		efficiency += part.rating
+	for(var/obj/item/stock_parts/servo/part in component_parts)
+		speed_coeff += part.rating
 	final_damage = 100 - ((efficiency * 15) + 10)
 	final_damage = clamp(final_damage, 0, MAXIMUM_FINAL_DAMAGE)
 
@@ -233,7 +234,7 @@
 
 			while(progress > (installed / flesh_number))
 				attach_flesh(mob_occupant, pick_n_take(unattached_flesh))
-				installed =+ 1
+				installed += 1
 
 			use_power(7500) //This might need tweaking.
 
